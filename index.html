@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'épidurale durant l'accouchement - CISSS Lanaudière</title>
+    <style>
+        :root {
+            --primary-color: #005b96;
+            --secondary-color: #e3f2fd;
+            --accent-color: #0288d1;
+            --text-color: #333333;
+            --bg-color: #f7f9fc;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .logo {
+            max-height: 70px;
+            width: auto;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .page {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        h1 { font-size: 1.5rem; text-align: center; }
+        
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .context-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        /* Style pour les nouveaux espaces images */
+        .placeholder-img {
+            width: 100%;
+            height: 200px;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .menu-btn {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: 2px solid transparent;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .menu-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .menu-btn::after {
+            content: "➔";
+        }
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-back {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        .btn-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        .faq-section {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 5px solid #ff9800;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-item h4 {
+            margin-bottom: 5px;
+            color: #e65100;
+        }
+        ul { padding-left: 20px; }
+        .plan-b-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .plan-b-card {
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://diam0ndxtr.github.io/epidobsthplg/logo.png" class="logo" alt="Logo CISSS Lanaudière">
+    </header>
+
+    <div class="container">
+        
+        <!-- PAGE D'ACCUEIL -->
+        <div id="page-home" class="page active">
+            <img src="https://diam0ndxtr.github.io/epidobsthplg/maternite.png" class="hero-img" alt="Maternité">
+            
+            <h1>L'Épidurale durant l'accouchement</h1>
+            <p><strong>Département d’anesthésiologie</strong> - CISSS de Lanaudière (CHDL & HPLG)</p>
+            
+            <p>L’anesthésie épidurale (ou tout simplement l’épidurale ou la péridurale) est une méthode <strong>très efficace</strong> et <strong>très sécuritaire</strong> de soulagement des douleurs accompagnant les contractions utérines de l’accouchement. Le choix d’avoir ou non une épidurale <strong>est le vôtre</strong> et n’est <strong>pas du tout essentiel</strong> au bon déroulement de votre travail; en effet, de nombreuses femmes accouchent sans épidurale.</p>
+            
+            <div class="menu-grid">
+                <button class="menu-btn" onclick="navTo('page-intro')">Qu'est-ce que l'épidurale?</button>
+                <button class="menu-btn" onclick="navTo('page-moment')">À quel moment la demander?</button>
+                <button class="menu-btn" onclick="navTo('page-deroulement')">Comment se déroule l'installation?</button>
+                <button class="menu-btn" onclick="navTo('page-effets')">Effets indésirables et Complications</button>
+                <button class="menu-btn" onclick="navTo('page-contre')">Contre-indications et Précautions</button>
+                <button class="menu-btn" onclick="navTo('page-planb')">Pourquoi prévoir un PLAN B?</button>
+            </div>
+
+            <div class="faq-section">
+                <h3>Questions les plus fréquentes</h3>
+                <div class="faq-item">
+                    <h4>Le temps nécessaire pour être soulagée</h4>
+                    <p>Il faut prévoir plusieurs étapes : un délai possible de <strong>5 à 30 minutes</strong> avant l'arrivée de l'anesthésiste, le temps de faire la technique épidurale, et un délai supplémentaire de <strong>10 à 20 minutes</strong> avant que le soulagement ne se fasse ressentir.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Le risque de paralyser</h4>
+                    <p>Des problèmes neurologiques graves tels qu'une paralysie des jambes sont décrits, mais ils sont <strong>extrêmement rares</strong>. La technique épidurale reste une technique très sécuritaire.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Les contre-indications absolues</h4>
+                    <p>Dans de rares cas, l'épidurale est <strong>impossible à offrir</strong>. Les contre-indications absolues incluent : certains troubles de la <strong>coagulation sanguine</strong>, la prise de <strong>médicaments anticoagulants</strong> (autres que l'aspirine), la présence d'une <strong>infection au site d'insertion</strong>, ou une <strong>pression intracrânienne trop élevée</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE INTRO -->
+        <div id="page-intro" class="page">
+            <h2>Qu'est-ce que l'épidurale?</h2>
+            
+            <h3>L'accouchement et la douleur</h3>
+            <p>Le travail menant à la naissance de votre enfant se déroule de manière <strong>progressive</strong> et la douleur est <strong>graduelle</strong> elle aussi. La localisation de la douleur peut varier durant le travail également. La <strong>perception de la douleur est différente</strong> d’une femme à l’autre et d’un accouchement à l’autre.</p>
+            
+            <img src="https://diam0ndxtr.github.io/epidobsthplg/colonne.png" alt="Colonne vertébrale" class="context-img">
+
+            <h3>En quoi consiste l'épidurale?</h3>
+            <p>L’épidurale consiste à injecter un médicament anesthésique <strong>à proximité des nerfs</strong> qui transmettent les sensations douloureuses. Ces nerfs ont leur origine dans la moelle épinière; c’est donc dans la <strong>région lombaire</strong> de la colonne vertébrale (dans le bas du dos) que l’anesthésiste fait l’épidurale.</p>
+            
+            <p>Un petit cathéter de la <strong>grosseur d’un spaghetti</strong> est installé à cet endroit pour permettre de soulager la douleur tout au long du travail jusqu’à la fin de l’accouchement. Une fois le cathéter installé, <strong>vous ne le sentirez pas du tout</strong>.</p>
+            
+            <p>L’épidurale peut soulager <strong>en partie ou en totalité</strong> la douleur des contractions. Des doses supplémentaires de médicament peuvent être ajoutées afin de mieux soulager la douleur si elle augmente, ce qui est souvent efficace (mais pas toujours).</p>
+            
+            <p>Cette technique est <strong>très sécuritaire</strong> tant pour la mère que pour le bébé. La durée du travail peut à l’occasion être légèrement prolongée, mais il n’y a <strong>pas de risque accru de césarienne</strong>. Il est possible de continuer à <strong>bouger dans le lit</strong> une fois votre épidurale faite, mais on vous demandera de <strong>ne pas marcher</strong> étant donné que vos jambes pourraient être engourdies.</p>
+            
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+        <!-- PAGE MOMENT -->
+        <div id="page-moment" class="page">
+            <h2>À quel moment demander l'épidurale?</h2>
+            <img src="https://diam0ndxtr.github.io/epidobsthplg/time.png" alt="Moment opportun" class="context-img">
+            
+            <p>L’épidurale est généralement réalisée quand le travail est <strong>bien amorcé</strong> et que votre médecin l’autorise. Vos contractions sont alors <strong>régulières, douloureuses</strong> et votre col utérin se dilate. L’anesthésiste de garde sera alors appelé pour venir faire la technique.</p>
+            
+            <p>Un <strong>délai peut s’avérer nécessaire</strong> si l’anesthésiste est occupé au bloc opératoire ou s’il/elle doit se déplacer.</p>
+            
+            <p>Dans certaines situations médicales précises, l’épidurale peut parfois être faite <strong>avant que le travail soit amorcé</strong> ou encore en <strong>tout début de travail</strong>, alors que les contractions ne sont pas encore très douloureuses. Votre médecin et votre anesthésiste décident alors en collaboration de vous offrir l’épidurale de manière précoce.</p>
+            
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+        <!-- PAGE DEROULEMENT - MENU INTERMÉDIAIRE -->
+        <div id="page-deroulement" class="page">
+            <h2>L'installation de l'épidurale</h2>
+            <img src="https://diam0ndxtr.github.io/epidobsthplg/steps.png" alt="Préparation" class="context-img">
+            
+            <p>L'installation se fait en plusieurs étapes pour assurer votre sécurité et votre confort. Choisissez une section pour en savoir plus :</p>
+            
+            <div class="menu-grid">
+                <button class="menu-btn" onclick="navTo('page-deroulement-avant')">1. Avant la procédure</button>
+                <button class="menu-btn" onclick="navTo('page-deroulement-pendant')">2. Pendant l'installation</button>
+                <button class="menu-btn" onclick="navTo('page-deroulement-apres')">3. Après l'installation</button>
+            </div>
+
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+        <!-- SOUS-PAGE : AVANT -->
+        <div id="page-deroulement-avant" class="page">
+            <h2>1. Avant la procédure</h2>
+	    <img src="https://diam0ndxtr.github.io/epidobsthplg/avant.png" alt="Avant" class="context-img">
+            <p>Avant de procéder à l’installation d’une épidurale, votre infirmière aura <strong>mesuré vos signes vitaux</strong> et vous aura <strong>posé un soluté</strong>; une prise de sang est parfois faite également.</p>
+            <p>À son arrivée, votre anesthésiste fera un <strong>bref questionnaire médical</strong> et vous expliquera le déroulement de l’installation de l’épidurale.</p>
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+        <!-- SOUS-PAGE : PENDANT -->
+        <div id="page-deroulement-pendant" class="page">
+            <h2>2. Pendant l'installation</h2>
+            <img src="https://diam0ndxtr.github.io/epidobsthplg/position.png" class="context-img">
+            <p>Vous serez positionnée soit <strong>assise</strong>, soit <strong>allongée sur le côté</strong>. Pour votre sécurité, il est <strong>très important de rester immobile</strong> durant l’épidurale. On vous demandera de porter un bonnet d’hôpital pour retenir vos cheveux.</p>
+            <p>Votre anesthésiste désinfectera le bas de votre dos avec un produit antiseptique et fera une <strong>anesthésie locale</strong> au site ou sera installée l’épidurale; vous ressentirez alors une <strong>piqûre inconfortable de brève durée</strong>.</p>
+            <p>Une aiguille sera ensuite avancée doucement entre deux vertèbres; ceci <strong>ne devrait pas être douloureux</strong>, vous pourriez ressentir tout au plus une <strong>pression</strong> dans le bas du dos. Il peut arriver que vous ressentiez une sensation de <strong>courant électrique bref</strong> qui descend dans une fesse ou dans une jambe; ceci <strong>n’est pas dangereux</strong>.</p>
+            <p>Un <strong>petit cathéter</strong> sera installé et l’aiguille tout de suite retirée.</p>
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+        <!-- SOUS-PAGE : APRÈS -->
+        <div id="page-deroulement-apres" class="page">
+            <h2>3. Après l'installation</h2>
+	    <img src="https://diam0ndxtr.github.io/epidobsthplg/apres.png" class="context-img">
+            <p>L’ensemble de la procédure ne prend que <strong>quelques minutes</strong> habituellement, mais il faut compter <strong>jusqu’à une vingtaine de minutes</strong> avant de ressentir un soulagement des contractions. Vous pourriez avoir une impression de <strong>lourdeur dans les jambes</strong> et les sentir engourdies. Il est possible d’ajuster la dose d’épidurale si vous ressentez encore de la douleur.</p>
+            <p>Votre infirmière <strong>mesurera vos signes vitaux fréquemment</strong> durant une vingtaine de minutes suivant l’installation, puis à intervalles réguliers par la suite. La <strong>fréquence cardiaque de votre bébé</strong> sera également suivie de manière plus rapproché.</p>
+            <p>Un <strong>petit coussin</strong> sera installé sous votre fesse droite afin d’anguler votre ventre vers la gauche pour <strong>favoriser la circulation sanguine à votre bébé</strong>.</p>
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+        <!-- PAGE EFFETS -->
+        <div id="page-effets" class="page">
+            <h2>Effets indésirables et Complications</h2>
+            <img src="https://diam0ndxtr.github.io/epidobsthplg/safety.png" alt="Attention" class="context-img">
+            
+            <p>On compte parmi les effets indésirables <strong>plus fréquents</strong> de l’épidurale les réactions suivantes :</p>
+            <ul>
+                <li>Une <strong>diminution de pression sanguine</strong>, le plus souvent brève et facilement traitable.</li>
+                <li>Des <strong>démangeaisons</strong>, pour lesquelles des traitements existent.</li>
+                <li>Une <strong>faiblesse des jambes</strong>, parfois d’un côté plus que de l’autre. Ceci est facilement corrigeable en ajustant votre épidurale ou en vous repositionnant.</li>
+                <li>Une <strong>difficulté à uriner</strong>. Si ceci se produit, votre infirmière pourra vider votre vessie à l’aide d’un petit cathéter stérile.</li>
+                <li>Un <strong>mal de tête assez intense</strong> survenant dans les heures ou les jours suivant votre épidurale, pire en position assise ou debout et soulagé en se couchant (survient après environ 1 épidurale sur 100). Des traitements efficaces sont disponibles.</li>
+                <li>Un <strong>inconfort ou une douleur au bas du dos</strong> qui peuvent durer jusqu’à quelques jours. Par contre, il n’existe <strong>aucun lien</strong> entre le fait de recevoir une épidurale pour accoucher et le risque de développer une douleur chronique au dos.</li>
+                <li>Un <strong>soulagement inadéquat</strong> des contractions peut survenir dans 5 à 10% des épidurales. Parfois un endroit précis ou un côté du ventre est mal soulagé. Certaines interventions sont possibles pour améliorer le soulagement, mais il est parfois nécessaire de recommencer l’épidurale.</li>
+            </ul>
+            
+            <h3>Complications rares</h3>
+            <p>Certaines complications graves peuvent survenir à la suite d’une épidurale, mais ces complications sont <strong>rares</strong>.</p>
+            <ul>
+                <li>Une faiblesse ou un engourdissement persistants aux jambes peuvent survenir, mais sont <strong>habituellement dus à un mauvais positionnement</strong> durant l’accouchement et non à l’épidurale elle-même.</li>
+                <li>Des problèmes neurologiques graves tels <strong>paralysie des jambes ou une méningite</strong> sont décrits mais sont <strong>extrêmement rares</strong>.</li>
+            </ul>
+            
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+        <!-- PAGE CONTRE-INDICATIONS -->
+        <div id="page-contre" class="page">
+            <h2>Contre-indications et Précautions</h2>
+	    <img src="https://diam0ndxtr.github.io/epidobsthplg/complex.png" alt="Attention" class="context-img">
+                  
+            <h3>Contre-indications absolues</h3>
+            <p>Certaines conditions médicales font en sorte que l’épidurale <strong>n’est pas sécuritaire</strong>. On reconnait entre autres :</p>
+            <ul>
+                <li>Certains <strong>troubles de la coagulation sanguine</strong></li>
+                <li>La prise de <strong>médicaments anticoagulants</strong> (autres que l’aspirine)</li>
+                <li>La présence d’une <strong>infection au site d’insertion</strong> de l’épidurale</li>
+                <li>Une <strong>pression intracrânienne trop élevée</strong></li>
+            </ul>
+            
+            <h3>Risque d'échec ou de difficulté</h3>
+            <p>De plus, certaines situations peuvent rendre l’épidurale <strong>plus difficile à réaliser</strong> et augmenter le risque d’échec :</p>
+            <ul>
+                <li>L’<strong>obésité</strong></li>
+                <li>La présence d’une <strong>déformation de la colonne vertébrale</strong>, telle une scoliose</li>
+                <li>Une <strong>ancienne chirurgie au bas du dos</strong>, surtout si des tiges métalliques ont été implantées</li>
+            </ul>
+            
+            <h3>Précautions</h3>
+            <p>Si vous souffrez de problèmes <strong>neurologiques, cardiaques ou respiratoires sérieux</strong>, parlez-en à votre anesthésiste car ils pourraient avoir un impact sur la prise en charge de votre accouchement.</p>
+            
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+        <!-- PAGE PLAN B -->
+        <div id="page-planb" class="page">
+            <h2>Pourquoi prévoir un PLAN B à l'épidurale?</h2>
+            <img src="https://diam0ndxtr.github.io/epidobsthplg/planb.png" alt="Attention" class="context-img">
+
+            <p>Bien que l'épidurale soit une excellente option, il est <strong>prudent d'avoir d'autres outils</strong> de gestion de la douleur, car certaines situations peuvent se présenter :</p>
+            
+            <div class="plan-b-grid">
+                <div class="plan-b-card">
+                    <strong>1.</strong> Votre nombre de plaquettes est <strong>trop bas</strong> pour pratiquer une épidurale.
+                </div>
+                <div class="plan-b-card">
+                    <strong>2.</strong> L'épidurale <strong>ne fonctionne tout simplement pas</strong> pour vous.
+                </div>
+                <div class="plan-b-card">
+                    <strong>3.</strong> <strong>Plusieurs autres mamans</strong> sont aussi en attente d'une épidurale et vous devez attendre votre tour.
+                </div>
+                <div class="plan-b-card">
+                    <strong>4.</strong> L'anesthésiste est <strong>en salle d'opération</strong> ou retenu par une urgence.
+                </div>
+                <div class="plan-b-card">
+                    <strong>5.</strong> Votre bébé <strong>se pointe le bout du nez trop vite!</strong>
+                </div>
+                <div class="plan-b-card">
+                    <strong>6.</strong> Une <strong>infection localisée</strong> à l'endroit de l'épidurale empêche l'intervention.
+                </div>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="btn btn-back" onclick="navBack()">Retour</button>
+                <button class="btn btn-home" onclick="navHome()">Accueil</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let navigationHistory = ['page-home'];
+
+        function navTo(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            
+            if (navigationHistory[navigationHistory.length - 1] !== pageId) {
+                navigationHistory.push(pageId);
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function navBack() {
+            if (navigationHistory.length > 1) {
+                navigationHistory.pop(); 
+                const prevPageId = navigationHistory[navigationHistory.length - 1];
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                document.getElementById(prevPageId).classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function navHome() {
+            navigationHistory = ['page-home'];
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page-home').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
